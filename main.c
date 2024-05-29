@@ -1,9 +1,8 @@
-/*
-    malloc, calloc, realloc, free
-*/
-
 #include <stdio.h>
+void display(int*, int);
+
 int i;
+
 int main()
 {
     //1D Array
@@ -56,6 +55,11 @@ int main()
     display(even, count_even);
     printf("\nElements in odd are: \n");
     display(odd, count_odd);
+
+    //release memory
+    free(arr);
+    free(even);
+    free(odd);
 
     return 0;
 }
